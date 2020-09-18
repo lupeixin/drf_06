@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 from userapp import models
 from userapp.authenticator import MyAuth
 from userapp.permission import MyPermission
+from userapp.throttle import MyThrottle
 
 
 class Demo(APIView):
@@ -30,7 +31,7 @@ class UserAPIView(APIView):
 
     permission_classes = [MyPermission]
     authentication_classes = [MyAuth]
-    throttle_classes = []
+    throttle_classes = [MyThrottle]
 
     def get(self, request, *args, **kwargs):
         return Response("读操作")

@@ -148,7 +148,7 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'user': "3/m",
         'anon': None,
-        'sms': "1/m"
+        'mmm': "1/m"
     },
 }
 
